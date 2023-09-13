@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //İhtiyacım olan değişkenleri tanımadığım kısım.
         int km, age, tip;
         double normalFiyat;
         double satisFiyat;
@@ -13,6 +14,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
+        // Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alındığı kısım.
         System.out.print("Mesafeyi km türünden giriniz : ");
         km = input.nextInt();
 
@@ -21,7 +23,7 @@ public class Main {
 
         System.out.print("Yolculuk tipini giriniz(1 =>Tek Yön ,2 => Gidiş Dönüş ) : ");
         tip = input.nextInt();
-
+        //Girelen verilerin indirim oranlarına göre hesaplandığı kısım
         normalFiyat = km * 0.10;
         satisFiyat = tip == 1 ? normalFiyat : normalFiyat * 0.80*2;
         cocukIndirimi = satisFiyat*0.50;
@@ -29,7 +31,7 @@ public class Main {
         yasliIndirimi=satisFiyat*0.70;
 
 
-
+        //Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olduğu ve gerekli indirimlerin ekrana yansıtıldığı kısım.
         if ((km > 0) && (age > 0) && (tip == 1 || tip == 2)) {
             if(age<12){
                 System.out.println("Toplam Tutar ="+cocukIndirimi);
