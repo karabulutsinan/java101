@@ -56,7 +56,8 @@ public class Employee {
     }
 
     public String toString() {
-        return " Adı : " + this.name + "\n Maaşı : " + this.salary
+        return  " Adı : " + this.name
+                + "\n Maaşı : " + this.salary
                 + "\n Başlangıç Yılı : " + this.hireYear
                 + "\n Vergi : " + tax()
                 + "\n Bonus : "+bonus()

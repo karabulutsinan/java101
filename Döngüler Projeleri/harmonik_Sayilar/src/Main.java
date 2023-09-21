@@ -9,6 +9,7 @@ public class Main {
 
         for (double i = 1; i <= n; i++) {
             result += (1/i);
+
         }
         System.out.println("Hormanik Sayı Değeri: "+result);
 
